@@ -6,12 +6,15 @@ public class Student {
 	private double gpa;
 
 	public Student(String id, String name, double gpa) {
-		if (!isValidId(id)) {
-			throw new IllegalArgumentException("Ma sinh vien khong hop le");
-		}
-		this.id = id;
-		this.name = name;
-		setGpa(gpa);
+	    if (!isValidID(id)) {
+	        throw new IllegalArgumentException("Id khong hop le");
+	    }
+	    if (name == null || name.trim().isEmpty()) {
+	        throw new IllegalArgumentException("Ten khong duoc rong");
+	    }
+	    this.id = id;
+	    this.name = name;
+	    setGpa(gpa);
 	}
 
 	@Override
@@ -19,16 +22,16 @@ public class Student {
 		return "Student [id=" + id + ", name=" + name + ", gpa=" + gpa + "]";
 	}
 
-	public String getId() {
+	public String getID() {
 		return id;
-	}
-
-	public double getGpa() {
-		return gpa;
 	}
 
 	public String getName() {
 		return name;
+	}
+
+	public double getGpa() {
+		return gpa;
 	}
 
 	public void setGpa(double gpa) {
@@ -38,8 +41,8 @@ public class Student {
 		this.gpa = gpa;
 	}
 
-	public static boolean isValidId(String id) {
+	public static boolean isValidID(String id) {
 		return id != null && id.matches("SV\\d{2,6}");
 	}
-
+	
 }

@@ -13,6 +13,7 @@ public class Main {
 			System.out.println("2. Xoa sinh vien");
 			System.out.println("3. Tim theo id");
 			System.out.println("4. In danh sach");
+			System.out.println("5. In Sinh vien co Gpa cao nhat");
 			System.out.println("0. Thoat");
 			System.out.print("Chon: ");
 
@@ -41,8 +42,10 @@ public class Main {
 
 					System.out.println("Them sinh vien thanh cong!");
 
+				}  catch (NumberFormatException e) {
+				    System.out.println("Loi: GPA phai la so");
 				} catch (DuplicateStudentException | IllegalArgumentException e) {
-					System.out.println("Loi: " + e.getMessage());
+				    System.out.println("Loi: " + e.getMessage());
 				}
 
 				break;
@@ -72,6 +75,13 @@ public class Main {
 			case 4:
 				manager.displayStu();
 				break;
+			case 5: 
+				Student top = manager.findTop();
+			    if (top == null) {
+			        System.out.println("Danh sach trong");
+			    } else {
+			        System.out.println("Sinh vien co GPA cao nhat: " + top);
+			    }
 			case 0:
 				running = false;
 				break;
