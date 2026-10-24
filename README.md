@@ -87,6 +87,6 @@ This project was developed to strengthen my understanding of Java Core fundament
 
 **Nguyen Cong Hao**
 
-Aspiring Java Backend Developer | Java Backend Fresher
+Aspiring Java Backend Developer | Java Backend Intern/Fresher
 
 GitHub: [HaoNguyen2005](https://github.com/HaoNguyen2005)
