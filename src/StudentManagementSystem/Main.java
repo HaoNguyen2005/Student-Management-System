@@ -82,6 +82,7 @@ public class Main {
 			    } else {
 			        System.out.println("Sinh vien co GPA cao nhat: " + top);
 			    }
+			    break;
 			case 0:
 				running = false;
 				break;
